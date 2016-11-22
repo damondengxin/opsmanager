@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'deploy',
 ]
 
 MIDDLEWARE = [
@@ -85,7 +86,7 @@ DATABASES = {
         'NAME': 'opsmanager',
         'USER':'damon',
         'PASSWORD':'damondeng',
-        'HOST':'172.16.109.211',
+        'HOST':'localhost',
         'PORT':'3306',
     }
 }
@@ -135,3 +136,4 @@ STATICFILES_DIRS =(
 )
 
 LOGIN_REDIRECT_URL='/'
+

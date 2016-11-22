@@ -6,9 +6,12 @@ from django.core.urlresolvers import reverse
 
 
 
+@login_required()
 def index(request):
     if not request.user.is_authenticated():
         return HttpResponseRedirect(reverse('login'))
     else:
-        #return HttpResponseRedirect(reverse('servers_list'))
-        return  HttpResponse('test')
+        return render(request,'index.html')
+         #return HttpResponseRedirect(reverse('servers_list'))
+         #return  HttpResponse('index')
+         #return HttpResponseRedirect(reverse('index'))
