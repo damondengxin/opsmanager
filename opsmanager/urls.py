@@ -16,10 +16,12 @@ Including another URLconf
 from django.conf.urls import url,include
 from django.contrib import admin
 from . import  views
+from deploy import  urls
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index, name='index'),
+    url(r'^deploylist', include('deploy.urls')),
     #url(r'^index', views.index, name='index'),
 
     url(r'^accounts/',include('django.contrib.auth.urls')) ,

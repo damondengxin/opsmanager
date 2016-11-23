@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>deploylist</title>
+</head>
+<body>
+    <table border="1"  align="center" width="800">
+
+        <tr align="center" >
+                <td> 项目 </td>
+                <td> 当前发布版本 </td>
+                <td> 部署机器 </td>
+                <td> 机器ip </td>
+                <td> 动作 </td>
+
+        </tr>
+
+
+        {% for p in d_list %}
+            <tr align="center">
+                <td>{ p.project }</td>
+                <td>{ p.curentversion }</td>
+                <td>{ p.deployhost }</td>
+                <td>{ p.hostip }</td>
+                <td> { p.action }</td>
+            </tr>
+        {% endfor %}
+       </table>
+        <hr style="FILTER: alpha(opacity=100,finishopacity=0,style=2)" width="80%" color=#987cb9 SIZE=10>
+        <input type="submit" value="添加" > <input type="submit" value="删除">
+</body>
+</html>
