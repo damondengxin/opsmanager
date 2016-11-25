@@ -21,7 +21,7 @@ from deploy import  urls
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index, name='index'),
-    url(r'^deploylist', include('deploy.urls')),
+    url(r'^deploy', include('deploy.urls')),
     #url(r'^index', views.index, name='index'),
 
     url(r'^accounts/',include('django.contrib.auth.urls')) ,

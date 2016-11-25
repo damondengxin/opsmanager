@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>add project</title>
+</head>
+<body>
+     <form   method="post" >
+                {% csrf_token %}
+                项目名：
+                <input type="text"  name="projectname" value="{{ projectname.value }}"> <br/>
+                项目地址:
+                <input type="text"  name="projectaddress" value="{{ projectaddress.value }}"><br/>
+                部署机器:
+                <input type="text" name="hostname" value="{{ hostname.value }}"> <br/>
+                机器ip:
+                <input type="text"  name="hostip" value="{{ hostip.value }}"> <br/>
+               <button type="submit"  type="button">添加</button>
+     </form>
+</body>
+</html>
