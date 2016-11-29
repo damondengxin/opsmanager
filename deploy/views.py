@@ -10,14 +10,14 @@ def deploylist(request):
     return  render(request,'deploylist.html',{'d_list':d_list})
 
 def deployadd(request):
-    return render(request, 'deployadd.html')
     if request.method == 'POST':
-        projectname = request.POST['projectname']
-        projectaddress =request.POST['projectaddress']
+        project = request.POST['projectname']
+        address =request.POST['projectaddress']
         hostname=request.POST['hostname']
         hostip=request.POST['hostip']
 
-        deploydata=Deploy(project=projectname,address=projectaddress,deployhost=hostname,hostip=hostip)
+        deploydata=Deploy(project=project,address=address,deployhost=hostname,hostip=hostip,status=1)
         deploydata.save()
         return  render(request,'deploylist.html')
 
+    return render(request, 'deployadd.html')

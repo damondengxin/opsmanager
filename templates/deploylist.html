@@ -12,18 +12,18 @@
                 <td> 当前发布版本 </td>
                 <td> 部署机器 </td>
                 <td> 机器ip </td>
-                <td> 动作 </td>
+                <td> 状态 </td>
 
         </tr>
 
 
         {% for p in d_list %}
             <tr align="center">
-                <td>{ p.project }</td>
-                <td>{ p.curentversion }</td>
-                <td>{ p.deployhost }</td>
-                <td>{ p.hostip }</td>
-                <td> { p.action }</td>
+                <td>{{ p.project }}</td>
+                <td>{{ p.curentversion }}</td>
+                <td>{{ p.deployhost }}</td>
+                <td>{{ p.hostip }}</td>
+                <td> {{ p.status }}</td>
             </tr>
         {% endfor %}
        </table>
