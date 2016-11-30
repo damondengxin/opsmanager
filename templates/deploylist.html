@@ -8,6 +8,7 @@
     <table border="1"  align="center" width="800">
 
         <tr align="center" >
+                <td> 选择 </td>
                 <td> 项目 </td>
                 <td> 当前发布版本 </td>
                 <td> 部署机器 </td>
@@ -19,16 +20,19 @@
 
         {% for p in d_list %}
             <tr align="center">
+                <td><input type="radio" name='修改' value="修改"> </td>
                 <td>{{ p.project }}</td>
                 <td>{{ p.curentversion }}</td>
                 <td>{{ p.deployhost }}</td>
                 <td>{{ p.hostip }}</td>
-                <td> {{ p.status }}</td>
+                <td> {{ p.get_status_display }}</td>
             </tr>
         {% endfor %}
        </table>
         <hr style="FILTER: alpha(opacity=100,finishopacity=0,style=2)" width="80%" color=#987cb9 SIZE=10>
+        <a href="#">发布项目</a>
         <a href="/deploy/deployadd"> 添加项目</a>
+        <a href="#">修改项目</a>
         <a href="#">删除项目</a>
 </body>
 </html>
