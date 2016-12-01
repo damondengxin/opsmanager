@@ -21,3 +21,7 @@ def deployadd(request):
         return  render(request,'deploylist.html')
 
     return render(request, 'deployadd.html')
+
+
+def deployinfo(request):
+    return  render(request,'deployinfo.html')

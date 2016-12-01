@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>project info</title>
+</head>
+<body>
+     <form   method="post" >
+                {% csrf_token %}
+                包名：
+                <textarea rows="30" cols="60" name="baoming"> {{ baoming.value }} </textarea> <br/>
+                游戏前缀：
+                <input type="text" name="game"  value="{{ game.value }}"> <br/>
+                游戏组：
+                <input type="text" name="gamegroup"  value="{{ gamegroup.value }}"> <br/>
+               <button type="submit"  type="button">提交</button>
+     </form>
+</body>
+</html>
